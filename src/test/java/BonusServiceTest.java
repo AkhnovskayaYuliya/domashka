@@ -49,5 +49,28 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void test3 () {
+        BonusService service = new BonusService();
+
+        long amount = 49900;
+        boolean registered = false;
+        long expected = 499;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void test4 () {
+        BonusService service = new BonusService();
+
+        long amount = 50100;
+        boolean registered = false;
+        long expected = 500;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
 
